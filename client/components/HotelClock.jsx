@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import moment from 'moment';
 import '../css/Clock.less'
 
@@ -89,3 +89,9 @@ class HotelClock extends Component{
 }
 
 export default HotelClock;
+
+HotelClock.propTypes = {
+    name: PropTypes.string.isRequired,
+    tz: PropTypes.string.isRequired,
+    update: PropTypes.func
+};
